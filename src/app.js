@@ -12,7 +12,7 @@ const partialPath = path.join(__dirname, '../templates/partials');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
-let port = process.inv.PORT || 3002;
+let port = process.env.PORT || 3002;
 
 /*
 *   Setup handlebars engine and locations.
