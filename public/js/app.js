@@ -11,7 +11,7 @@ serchForm.addEventListener('submit', e => {
     message1.textContent = '';
     message2.textContent = 'Loading....';
     const searchTerm = document.querySelector('input').value;
-    fetch(`http://localhost:3002/weather?location=${searchTerm}`).then(response => {
+    fetch(`/weather?location=${searchTerm}`).then(response => {
         response.json().then((data) => {
             if(data.error){
                 message2.textContent = data.error;

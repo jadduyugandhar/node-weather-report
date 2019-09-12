@@ -12,6 +12,8 @@ const partialPath = path.join(__dirname, '../templates/partials');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
+let port = process.inv.PORT || 3002;
+
 /*
 *   Setup handlebars engine and locations.
 *  
@@ -89,6 +91,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen('3002', ()=>{
+app.listen(port, ()=>{
     console.log("server started..!");
 });
